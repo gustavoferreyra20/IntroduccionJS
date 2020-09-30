@@ -1,7 +1,11 @@
 function rechazar(parametro,lista){
-    var coinciden = lista.filter(parametro);
-    const noCoinciden = element => coinciden.includes(element) == false;
-    return lista.filter(noCoinciden);
+    return lista.filter(negate(parametro));
+}
+
+function negate (predicateFunc) {
+    return function () {
+        return !predicateFunc.apply(this, arguments);
+    };
 }
 
 const esPar = element => element % 2 ===0;

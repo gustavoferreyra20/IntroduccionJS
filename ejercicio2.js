@@ -1,3 +1,5 @@
 var x = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-console.log(x);
+x.forEach(element => {
+    console.log(element);
+});
